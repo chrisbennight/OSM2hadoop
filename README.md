@@ -15,7 +15,7 @@
  limitations under the License.
 -->
 
-Instamo
+OSM2hadoop
 =======
 
 Introduction
