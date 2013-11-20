@@ -15,9 +15,6 @@ import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.log4j.Logger;
 import org.openstreetmap.osmosis.osmbinary.Fileformat.BlobHeader;
 
-
-
-
 public class OSMPBFRecordReader extends RecordReader<LongWritable,BytesWritable> {
 	
 	private static final Logger sLogger = Logger.getLogger(OSMPBFRecordReader.class);
@@ -29,8 +26,6 @@ public class OSMPBFRecordReader extends RecordReader<LongWritable,BytesWritable>
 	  private FSDataInputStream in;
 	  private LongWritable key = null;
 	  private BytesWritable value = null;
-	  
-	  private Long uuid = UUID.randomUUID().getMostSignificantBits();  
 	  
 	@Override
 	public void initialize(InputSplit inputSplit, TaskAttemptContext context)throws IOException, InterruptedException {

@@ -28,7 +28,7 @@ private static final int DATABLOCKS_PER_MAPPER = 10;
 public List<InputSplit> getSplits(JobContext context){
 	List<InputSplit> splits = new ArrayList<InputSplit>();
 	FileSystem fs = null;
-    Path file = OSMPBFInputFormat.getInputPaths(context)[0];
+    Path file = FileInputFormat.getInputPaths(context)[0];
     FSDataInputStream in = null;
     try {  //File spec @ http://wiki.openstreetmap.org/wiki/PBF_Format
 		fs = FileSystem.get(context.getConfiguration());

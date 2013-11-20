@@ -1,7 +1,6 @@
 package com.bennight.OSMPBFHadoop;
 
 import java.io.ByteArrayInputStream;
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -62,7 +61,8 @@ public class OSMPBFMapper extends Mapper<LongWritable, BytesWritable, NullWritab
 	            //no idea
 	        }
 
-	        public void complete() {
+	        @Override
+			public void complete() {
 	            sLogger.info("Mapper Completed");
 	        }
 
